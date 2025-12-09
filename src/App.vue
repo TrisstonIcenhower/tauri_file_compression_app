@@ -44,7 +44,7 @@ async function selectImages() {
   <main>
     <h1>JXL File Compressor - jpegxl-rs</h1>
     <button @click="selectImages">Select Images</button>
-    <button @click="test">Process Files</button>
+    <button @click="test" :disabled="files.length == 0? true: false">Process Files</button>
     <ul>
       <li v-for="file in files" :key="file">{{ file }}</li>
     </ul>
