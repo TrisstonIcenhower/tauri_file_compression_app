@@ -19,7 +19,8 @@ async function test(){
 async function selectImages() {
   await open({
     multiple: true,
-    filters: [{ name: "Images", extensions: ['avif', 'bmp', 'dds', 'exr', 'ff', 'gif', 'hdr', 'ico', 'jpeg', 'png', 'pnm', 'qoi', 'tga', 'tiff', 'webp'] }],
+    filters: [{ name: "Images", extensions: ["bmp", "png", "tiff", "tif", "gif", "pbm", "pgm", "ppm", "pnm", "tga", "hdr", "exr", "ico", "qoi"]
+ }],
   })
     .then((selected) => {
       if (Array.isArray(selected)) {
